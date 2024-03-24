@@ -1,0 +1,13 @@
+# docker-compose.prod.yaml
+
+version: "3.8"
+services:
+  frontend:
+    container_name: frontend
+    build:
+      context: .
+      target: prod
+    restart: always
+    ports:
+      # this will run the build on port 80
+      - 80:3000
