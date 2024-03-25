@@ -1,15 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
- 
-type ResponseData = {
-  message: string
-}
+//"use server";
 
-export async function POST(
-    req: NextApiRequest,
-    res: NextApiResponse<ResponseData>
-  ) {
-  const data = req.body
-  console.log("data");
-  //const id = await createItem(data)
-  res.status(200).json({ message: 'Hello from Next.js!' })
+export async function POST(request: Request) {
+  const formData = await request.formData()
+  const name = formData.get('name')
+  return Response.json({ name })
 }
