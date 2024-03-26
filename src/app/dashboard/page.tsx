@@ -14,9 +14,19 @@ export default function Page() {
   }
  
   return (
-    <form onSubmit={onSubmit}>
-      <input type="number" name="fibN" />
-      <button type="submit">Submit</button>
-    </form>
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+   
+      <form className="w-full max-w-sm" onSubmit={onSubmit}>
+        <div className="flex items-center border-b border-teal-500 py-2">
+          <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" 
+          type="number" placeholder="9" aria-label="Number" name="fibN"/>
+          <button className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="submit">
+            Submit
+          </button>
+        </div>
+      </form>
+    </main>
+
+    
   )
 }
