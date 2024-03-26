@@ -2,23 +2,26 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-## How to run the Dockerized app (preferred method; mandatory for Windows users)
+## How to run
 1. Open the `terminal` (or `cmd`) app  and clone the repository
 ```
 git clone https://github.com/lnovitz/fib.git
 ```
 
-2. Build the docker image. (Note: if you're having trouble with this command, make sure you're adding a "." dot at the end!)
+2. Build the docker image. (Note: if you get an error like `Docker not found`, install Docker -> https://docs.docker.com/get-docker/)
 ```
-docker build -t fib .
+docker-compose -f docker-compose.dev.yaml up
 ```
-3. Next, map the app to port 5001.
-```
-docker run -p 3000:3000 fib
-```
-Note: if you get yelled at by your terminal, use a different port like `3001:3000`.
 
-To test if the app is running correctly, navigate to http://localhost:3000/
+3. Navigate to http://localhost:3000/ to see the app running. 
 
+4. Enter a number, hit Submit, to be redirected to a new page with the corresponding Fibonacci sequence of length up to number you entered.
+
+5. To run existing unit tests, run the command below:
+```
+node_modules/.bin/jest
+```
+
+6. Last but not least, invite Lianna to meet your team!
 
 ![alt text](https://file%2B.vscode-resource.vscode-cdn.net/Users/lnovitz/Desktop/Screenshot%202024-03-22%20at%2010.49.58%20PM.png?version%3D1711173260134)
