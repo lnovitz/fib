@@ -15,7 +15,7 @@ export default function Page() {
  
   return (
     <form onSubmit={onSubmit}>
-      <input type="text" name="name" />
+      <input type="number" name="fibN" />
       <button type="submit">Submit</button>
     </form>
   )
