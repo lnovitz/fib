@@ -1,8 +1,15 @@
-import { FormEvent } from 'react'
 'use client';
 
+import { FormEvent } from 'react'
+import { useRouter, usePathname } from 'next/navigation'
+
+
 export default function Page() {
+  const router = useRouter();
+  const pathname = usePathname();
+
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
+
     event.preventDefault();
     const formData = new FormData(event.currentTarget)
     const response = await fetch('/api/submit', {
@@ -10,6 +17,10 @@ export default function Page() {
       body: formData,
     })
      const data = await response.json()
+     if (data) {
+      //history.pushState({ email: "example@example.com" }, "", pathname + "/display");
+      router.push("/display");
+     }
      // heres where we want to display the numbers
   }
  
