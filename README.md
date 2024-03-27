@@ -2,35 +2,26 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## How to run
+1. Open the `terminal` (or `cmd`) app  and clone the repository
+```
+git clone https://github.com/lnovitz/fib.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Build the docker image. (Note: if you get an error like `Docker not found`, install Docker -> https://docs.docker.com/get-docker/)
+```
+docker-compose -f docker-compose.dev.yaml up
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Navigate to http://localhost:3000/ to see the app running. 
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+4. Enter a number, hit Submit, to be redirected to a new page with the corresponding Fibonacci sequence of length up to number you entered.
 
-## Learn More
+5. To run existing unit tests, run the command below:
+```
+node_modules/.bin/jest
+```
 
-To learn more about Next.js, take a look at the following resources:
+6. Last but not least, invite Lianna to meet your team!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![alt text](https://file%2B.vscode-resource.vscode-cdn.net/Users/lnovitz/Desktop/Screenshot%202024-03-22%20at%2010.49.58%20PM.png?version%3D1711173260134)
