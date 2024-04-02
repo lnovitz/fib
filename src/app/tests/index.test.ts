@@ -1,4 +1,4 @@
-import { callFib } from '../api/route'
+import { callFib } from '../utils/fib_utils'
 
 describe('testing Fibonacci sequence generator', () => {
   test('n is 0 should result in array ending in zero', () => {

@@ -1,7 +1,7 @@
 'use client'
 
 import { useSearchParams } from 'next/navigation'
-import { callFib } from '../api/route';
+import { callFib } from '../utils/fib_utils';
 
 export default function Page() {
     const searchParams = useSearchParams();
