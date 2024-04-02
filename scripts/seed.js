@@ -11,7 +11,7 @@ async function seedSequences(client) {
       CREATE TABLE IF NOT EXISTS sequences (
         id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
         input INT NOT NULL,
-        list INT[] NOT NULL
+        list integer ARRAY NOT NULL
       );
     `;
 

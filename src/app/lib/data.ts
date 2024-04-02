@@ -12,3 +12,17 @@ export async function getSequence(input: number) {
     throw new Error('Failed to fetch user.');
   }
 }
+
+export async function insertSequence(input: number, list: number[]) {
+  try {
+    await sql`
+    INSERT INTO sequences (input, list)
+        VALUES (${input}, ${list})
+        ON CONFLICT (id) DO NOTHING;
+      `;
+    
+  } catch (error) {
+    console.error('Failed to insert sequence:', error);
+    throw new Error('Failed to insert sequence.');
+  }
+}
