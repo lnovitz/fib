@@ -1,13 +1,13 @@
 'use client';
 
-import { useState } from 'react'
+import { ChangeEvent, useState } from 'react'
 import Link from 'next/link'
 
 
 export default function Page() {
   const [fibN, setFibN] = useState('');
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFibN(e.target.value);
   };
 
