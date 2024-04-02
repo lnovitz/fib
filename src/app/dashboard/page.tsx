@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react'
-import { usePathname, useRouter } from 'next/navigation'
 import Link from 'next/link'
 
 
@@ -22,7 +21,7 @@ export default function Page() {
           <Link className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" href={{
             pathname: '/display',
             query: { name: fibN }
-          }}> Submit
+          }}>
             Submit
         </Link>
         </div>
