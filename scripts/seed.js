@@ -11,7 +11,7 @@ async function seedSequences(client) {
       CREATE TABLE IF NOT EXISTS sequences (
         id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
         input INT NOT NULL,
-        list integer ARRAY NOT NULL
+        output INT NOT NULL
       );
     `;
 
@@ -21,8 +21,8 @@ async function seedSequences(client) {
     const insertedSequences = await Promise.all(
       sequences.map(async (sequence) => {
         return client.sql`
-        INSERT INTO sequences (id, input, list)
-        VALUES (${sequence.id}, ${sequence.input}, ${sequence.list})
+        INSERT INTO sequences (id, input, output)
+        VALUES (${sequence.id}, ${sequence.input}, ${sequence.output})
         ON CONFLICT (id) DO NOTHING;
       `;
       }),

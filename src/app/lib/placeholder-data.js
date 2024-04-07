@@ -2,14 +2,14 @@
 // https://nextjs.org/learn/dashboard-app/fetching-data
 const sequences = [
   {
-    id: "a5764857-ae35-34dc-8f25-a9c9e73aa898",
+    id: "a5764857-ae35-34dc-8f25-a9c9e73aa901",
     input: 0,
-    list: [0],
+    output: 0,
   },
   {
-    id: "a5764857-ae35-34dc-8f25-a9c9e73aa899",
+    id: "a5764857-ae35-34dc-8f25-a9c9e73aa900",
     input: 1,
-    list: [0, 1],
+    output: 1,
   },
 ];
 

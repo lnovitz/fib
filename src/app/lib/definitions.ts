@@ -5,5 +5,5 @@
 export type Sequence = {
   id: string;
   input: number;
-  list: number[];
+  output: number;
 };
